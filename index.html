@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cursor Following Dragon</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background: #000;
+    }
+    canvas {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="game"></canvas>
+  <script>
+    const canvas = document.getElementById("game");
+    const ctx = canvas.getContext("2d");
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    let mouse = { x: canvas.width / 2, y: canvas.height / 2 };
+    document.addEventListener("mousemove", e => {
+      mouse.x = e.clientX;
+      mouse.y = e.clientY;
+    });
+
+    class Segment {
+      constructor(x, y) {
+        this.x = x;
+        this.y = y;
+      }
+    }
+
+    const dragon = [];
+    const length = 40; // number of body segments
+    const speed = 5;   // head speed
+
+    // initialize dragon body
+    for (let i = 0; i < length; i++) {
+      dragon.push(new Segment(canvas.width / 2, canvas.height / 2));
+    }
+
+    function update() {
+      // move head toward mouse
+      let head = dragon[0];
+      let dx = mouse.x - head.x;
+      let dy = mouse.y - head.y;
+      let dist = Math.sqrt(dx * dx + dy * dy);
+      if (dist > 1) {
+        head.x += (dx / dist) * speed;
+        head.y += (dy / dist) * speed;
+      }
+
+      // move rest of body
+      for (let i = dragon.length - 1; i > 0; i--) {
+        dragon[i].x = dragon[i - 1].x;
+        dragon[i].y = dragon[i - 1].y;
+      }
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // draw dragon body
+      for (let i = dragon.length - 1; i >= 0; i--) {
+        ctx.beginPath();
+        ctx.arc(dragon[i].x, dragon[i].y, 12 - i * 0.2, 0, Math.PI * 2);
+        ctx.fillStyle = `hsl(${(i * 10) % 360}, 80%, 50%)`;
+        ctx.fill();
+      }
+
+      // draw dragon head (eyes + mouth)
+      let head = dragon[0];
+      ctx.beginPath();
+      ctx.arc(head.x, head.y, 15, 0, Math.PI * 2);
+      ctx.fillStyle = "red";
+      ctx.fill();
+
+      // eyes
+      ctx.beginPath();
+      ctx.arc(head.x - 5, head.y - 5, 3, 0, Math.PI * 2);
+      ctx.arc(head.x + 5, head.y - 5, 3, 0, Math.PI * 2);
+      ctx.fillStyle = "white";
+      ctx.fill();
+
+      // mouth
+      ctx.beginPath();
+      ctx.arc(head.x, head.y + 5, 5, 0, Math.PI);
+      ctx.strokeStyle = "yellow";
+      ctx.stroke();
+    }
+
+    function loop() {
+      update();
+      draw();
+      requestAnimationFrame(loop);
+    }
+
+    loop();
+  </script>
+</body>
+</html>
