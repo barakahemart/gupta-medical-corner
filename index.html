@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Gupta Medical Corner - A Pharmacy For All Your Needs at Gopabandhu Chhak, Jajpur Road, Odisha. 10-15% discount on all medicines. Free doctor consultation.">
+<title>Gupta Medical Corner | Jajpur Road, Odisha</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+Oriya:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/* ══ RESET & BASE ══ */
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Plus Jakarta Sans','Noto Sans Oriya',sans-serif;background:#f7f9fc;color:#1a2332;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+ul{list-style:none}
+
+/* ══ CSS VARIABLES ══ */
+:root{
+  --blue:#0057a8;
+  --blue-dark:#003d7a;
+  --blue-light:#e8f2fc;
+  --green:#00a878;
+  --green-dark:#007a58;
+  --green-light:#e6f7f2;
+  --orange:#ff6b35;
+  --orange-light:#fff1ec;
+  --red:#e63946;
+  --yellow:#ffd60a;
+  --white:#ffffff;
+  --gray-50:#f7f9fc;
+  --gray-100:#eef2f7;
+  --gray-200:#dde3ed;
+  --gray-400:#8896ab;
+  --gray-600:#4a5568;
+  --gray-800:#1e2a3a;
+  --shadow-sm:0 1px 4px rgba(0,0,0,0.06);
+  --shadow:0 4px 20px rgba(0,0,0,0.08);
+  --shadow-lg:0 12px 40px rgba(0,0,0,0.12);
+  --radius:14px;
+  --radius-sm:8px;
+}
+
+/* ══ SCROLLBAR ══ */
+::-webkit-scrollbar{width:5px;height:5px}
+::-webkit-scrollbar-track{background:var(--gray-100)}
+::-webkit-scrollbar-thumb{background:var(--blue);border-radius:10px}
+
+/* ══ MARQUEE ══ */
+.marquee-wrap{background:var(--blue-dark);overflow:hidden;padding:7px 0;position:relative;z-index:100}
+.marquee-wrap::before,.marquee-wrap::after{content:'';position:absolute;top:0;bottom:0;width:50px;z-index:2}
+.marquee-wrap::before{left:0;background:linear-gradient(to right,var(--blue-dark),transparent)}
+.marquee-wrap::after{right:0;background:linear-gradient(to left,var(--blue-dark),transparent)}
+.marquee-track{display:flex;animation:marqueeScroll 35s linear infinite;white-space:nowrap;width:max-content}
+.marquee-track:hover{animation-play-state:paused}
+.marquee-item{display:inline-flex;align-items:center;gap:8px;padding:0 28px;color:rgba(255,255,255,0.88);font-size:0.75rem;font-weight:600;border-right:1px solid rgba(255,255,255,0.15)}
+.marquee-badge{background:var(--yellow);color:#1a1a1a;padding:2px 8px;border-radius:20px;font-size:0.68rem;font-weight:800}
+@keyframes marqueeScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* ══ TOPBAR ══ */
+.topbar{background:#fff;border-bottom:1px solid var(--gray-200);padding:8px 5%;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.topbar-left{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.topbar-item{display:flex;align-items:center;gap:6px;font-size:0.72rem;color:var(--gray-600)}
+.topbar-item .ico{font-size:0.9rem}
+.topbar-item strong{color:var(--gray-800);font-weight:700}
+.topbar-sep{width:1px;height:14px;background:var(--gray-200)}
+.open-badge{display:flex;align-items:center;gap:5px;font-size:0.72rem;font-weight:700;color:var(--green)}
+.open-dot{width:7px;height:7px;border-radius:50%;background:var(--green);animation:pulseDot 2s infinite}
+@keyframes pulseDot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.6;transform:scale(1.4)}}
+.topbar-right{display:flex;align-items:center;gap:8px}
+.topbar-phone{display:flex;align-items:center;gap:6px;background:var(--blue-light);color:var(--blue);padding:5px 12px;border-radius:20px;font-size:0.72rem;font-weight:700;transition:background .2s}
+.topbar-phone:hover{background:#d0e5f8}
+
+/* ══ NAVBAR ══ */
+.navbar{background:#fff;position:sticky;top:0;z-index:999;border-bottom:3px solid var(--blue);box-shadow:0 4px 20px rgba(0,87,168,0.12)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 4%;display:flex;align-items:center;height:90px;gap:16px}
+
+/* Logo — bigger & bolder */
+.logo{display:flex;align-items:center;gap:14px;flex-shrink:0;text-decoration:none}
+.logo-mark{width:54px;height:54px;background:linear-gradient(135deg,var(--blue-dark) 0%,#0079d3 100%);border-radius:14px;display:grid;place-items:center;font-size:28px;box-shadow:0 6px 18px rgba(0,87,168,0.35);position:relative;flex-shrink:0}
+.logo-mark::after{content:'✓';position:absolute;top:-5px;right:-5px;width:18px;height:18px;background:var(--green);border-radius:50%;font-size:9px;color:#fff;font-weight:900;display:grid;place-items:center;border:2.5px solid #fff;box-shadow:0 2px 6px rgba(0,168,120,0.4)}
+.logo-text{display:flex;flex-direction:column;gap:1px}
+.logo-name{font-size:1.85rem;font-weight:800;background:linear-gradient(90deg,var(--blue-dark),#0079d3);-webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1.1;letter-spacing:-0.5px;white-space:nowrap}
+.logo-tagline{font-size:0.65rem;color:var(--gray-400);font-weight:600;letter-spacing:0.3px}
+.logo-odia{font-family:'Noto Sans Oriya',sans-serif;font-size:0.62rem;color:var(--green);font-weight:700;line-height:1}
+
+/* Nav links */
+.nav-links{display:flex;align-items:center;gap:2px;margin-left:auto}
+.nav-links a{padding:7px 13px;border-radius:8px;font-size:0.8rem;font-weight:600;color:var(--gray-600);transition:all .2s;white-space:nowrap}
+.nav-links a:hover,.nav-links a.active{background:var(--blue-light);color:var(--blue)}
+
+/* CTA buttons */
+.nav-cta-group{display:flex;gap:8px;margin-left:14px;flex-shrink:0}
+.btn-consult{display:flex;align-items:center;gap:6px;background:var(--blue-light);color:var(--blue);border:2px solid var(--blue);padding:9px 18px;border-radius:10px;font-size:0.8rem;font-weight:800;transition:all .2s;white-space:nowrap}
+.btn-consult:hover{background:var(--blue);color:#fff}
+.btn-call{display:flex;align-items:center;gap:7px;background:linear-gradient(135deg,var(--green),#00d4a0);color:#fff;padding:9px 20px;border-radius:10px;font-size:0.82rem;font-weight:800;box-shadow:0 4px 14px rgba(0,168,120,0.35);transition:all .2s;white-space:nowrap}
+.btn-call:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(0,168,120,0.45)}
+.btn-call .ring{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,0.9);flex-shrink:0;animation:callPulse 1.5s infinite}
+@keyframes callPulse{0%{box-shadow:0 0 0 0 rgba(255,255,255,.7)}70%{box-shadow:0 0 0 6px rgba(255,255,255,0)}100%{box-shadow:0 0 0 0 rgba(255,255,255,0)}}
+
+/* ══ HAMBURGER ══ */
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:9px;border-radius:10px;transition:background .2s;margin-left:auto;flex-shrink:0}
+.hamburger:hover{background:var(--blue-light)}
+.hamburger span{width:24px;height:2.5px;background:var(--gray-800);border-radius:3px;transition:all .3s;display:block}
+.hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.hamburger.open span:nth-child(2){opacity:0;transform:translateX(-8px)}
+.hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+
+/* Mobile quick-call button in navbar (only on mobile) */
+.nav-mobile-call{display:none;align-items:center;gap:6px;background:var(--green);color:#fff;padding:9px 16px;border-radius:10px;font-size:0.82rem;font-weight:800;flex-shrink:0;box-shadow:0 3px 10px rgba(0,168,120,0.3)}
+
+/* ══ MOBILE MENU ══ */
+.mobile-menu{display:none;background:#fff;border-bottom:2px solid var(--gray-100);padding:0}
+.mobile-menu.open{display:block}
+.mobile-menu-inner{padding:8px 4% 6px}
+.mobile-menu a{display:flex;align-items:center;gap:10px;padding:13px 14px;border-radius:10px;font-size:0.9rem;font-weight:600;color:var(--gray-700);transition:all .2s;border-bottom:1px solid var(--gray-100)}
+.mobile-menu a:last-of-type{border-bottom:none}
+.mobile-menu a:hover{background:var(--blue-light);color:var(--blue)}
+.mobile-cta-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px 4% 16px;background:var(--gray-50)}
+.mobile-cta-row a{display:flex;align-items:center;justify-content:center;gap:8px;padding:13px;border-radius:12px;font-size:0.86rem;font-weight:800;text-align:center}
+.m-consult{background:var(--blue-light);color:var(--blue);border:2px solid var(--blue)}
+.m-call{background:linear-gradient(135deg,var(--green),#00d4a0);color:#fff;box-shadow:0 4px 12px rgba(0,168,120,0.3)}
+
+/* Mobile store info strip inside menu */
+.mobile-info-strip{background:var(--blue-dark);padding:10px 4%;display:flex;align-items:center;gap:8px;font-size:0.74rem;color:rgba(255,255,255,0.8);flex-wrap:wrap;gap:12px}
+.mis-item{display:flex;align-items:center;gap:5px}
+
+/* ══ DISCOUNT BAR ══ */
+.discount-bar{background:linear-gradient(90deg,var(--blue-dark) 0%,var(--blue) 50%,var(--blue-dark) 100%);padding:10px 5%;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.d-pills{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.dpill{padding:5px 14px;border-radius:20px;font-size:0.73rem;font-weight:700;white-space:nowrap}
+.dp-yellow{background:var(--yellow);color:#1a1a1a}
+.dp-green{background:rgba(0,212,160,0.2);color:#00ffcc;border:1px solid rgba(0,212,160,0.35)}
+.dp-white{background:rgba(255,255,255,0.12);color:#fff;border:1px solid rgba(255,255,255,0.22)}
+.dp-orange{background:rgba(255,107,53,0.2);color:#ffaa80;border:1px solid rgba(255,107,53,0.3)}
+.d-wa{display:flex;align-items:center;gap:7px;background:#25d366;color:#fff;padding:7px 16px;border-radius:8px;font-size:0.76rem;font-weight:800;transition:all .2s;white-space:nowrap}
+.d-wa:hover{transform:translateY(-1px);box-shadow:0 4px 14px rgba(37,211,102,0.45)}
+
+/* ══ CONTAINER ══ */
+.container{max-width:1200px;margin:0 auto;padding:0 5%}
+
+/* ══ HERO ══ */
+.hero{background:linear-gradient(135deg,var(--blue-dark) 0%,var(--blue) 55%,#0079d3 100%);padding:60px 0 70px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-80px;right:-80px;width:400px;height:400px;border-radius:50%;background:rgba(255,255,255,0.04)}
+.hero::after{content:'';position:absolute;bottom:-60px;left:-40px;width:300px;height:300px;border-radius:50%;background:rgba(255,255,255,0.03)}
+.hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;position:relative;z-index:1}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);color:#fff;padding:6px 16px;border-radius:20px;font-size:0.74rem;font-weight:700;margin-bottom:18px}
+.hero h1{color:#fff;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;line-height:1.2;margin-bottom:10px}
+.hero h1 span{background:var(--yellow);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero-odia{font-family:'Noto Sans Oriya',sans-serif;font-size:1rem;color:rgba(255,255,255,0.75);margin-bottom:16px;font-weight:700}
+.hero-desc{color:rgba(255,255,255,0.8);font-size:0.92rem;line-height:1.7;margin-bottom:24px}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+.hero-btn-primary{background:#fff;color:var(--blue);padding:12px 26px;border-radius:10px;font-weight:800;font-size:0.88rem;transition:all .2s;box-shadow:0 4px 14px rgba(0,0,0,0.15)}
+.hero-btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(0,0,0,0.2)}
+.hero-btn-outline{background:transparent;color:#fff;padding:12px 24px;border-radius:10px;font-weight:700;font-size:0.88rem;border:2px solid rgba(255,255,255,0.45);transition:all .2s}
+.hero-btn-outline:hover{background:rgba(255,255,255,0.1);border-color:#fff}
+.hero-stats{display:flex;gap:28px;margin-top:30px;flex-wrap:wrap}
+.stat-item{text-align:center}
+.stat-num{font-size:1.8rem;font-weight:800;color:#fff;line-height:1}
+.stat-label{font-size:0.68rem;color:rgba(255,255,255,0.65);font-weight:600;margin-top:3px}
+.stat-od{font-family:'Noto Sans Oriya',sans-serif;font-size:0.6rem;color:rgba(255,255,255,0.5);display:block}
+.hero-cards{display:flex;flex-direction:column;gap:14px}
+.hero-card{background:rgba(255,255,255,0.12);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.2);border-radius:var(--radius);padding:20px 22px;color:#fff;transition:transform .2s}
+.hero-card:hover{transform:translateY(-3px)}
+.hc-top{display:flex;align-items:center;gap:12px;margin-bottom:8px}
+.hc-icon{font-size:1.8rem}
+.hc-title{font-weight:800;font-size:1rem}
+.hc-od{font-family:'Noto Sans Oriya',sans-serif;font-size:0.65rem;color:rgba(255,255,255,0.7)}
+.hc-desc{font-size:0.8rem;color:rgba(255,255,255,0.78);line-height:1.55}
+.hc-tag{display:inline-block;background:var(--yellow);color:#1a1a1a;padding:3px 10px;border-radius:12px;font-size:0.68rem;font-weight:800;margin-top:8px}
+.hc-green{background:rgba(0,168,120,0.25);border-color:rgba(0,168,120,0.4)}
+.hc-orange{background:rgba(255,107,53,0.2);border-color:rgba(255,107,53,0.35)}
+
+/* ══ SECTION COMMONS ══ */
+section{padding:60px 0}
+.sec-label{font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--green);margin-bottom:6px}
+.sec-title{font-size:clamp(1.4rem,3vw,2rem);font-weight:800;color:var(--gray-800);margin-bottom:4px}
+.sec-odia{font-family:'Noto Sans Oriya',sans-serif;font-size:0.82rem;color:var(--gray-400);margin-bottom:36px}
+.text-center{text-align:center}
+
+/* ══ OFFER STRIP ══ */
+.offer-strip{background:linear-gradient(90deg,#c0392b,var(--red),#c0392b);padding:18px 5%;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.offer-text h3{color:#fff;font-size:1rem;font-weight:800;margin-bottom:4px}
+.offer-text .od{font-family:'Noto Sans Oriya',sans-serif;font-size:0.76rem;color:rgba(255,255,255,0.8)}
+.offer-chips{display:flex;gap:10px;flex-wrap:wrap}
+.o-chip{background:rgba(255,255,255,0.2);color:#fff;border:1px solid rgba(255,255,255,0.35);padding:6px 14px;border-radius:20px;font-size:0.76rem;font-weight:700}
+.offer-cta{background:#fff;color:var(--red);padding:10px 22px;border-radius:9px;font-weight:800;font-size:0.84rem;white-space:nowrap;transition:all .2s;flex-shrink:0}
+.offer-cta:hover{transform:scale(1.04)}
+
+/* ══ CATEGORIES ══ */
+.cat-section{background:#fff}
+.cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:12px}
+.cat-card{background:var(--gray-50);border:2px solid var(--gray-200);border-radius:var(--radius);padding:18px 10px 14px;text-align:center;cursor:pointer;transition:all .2s}
+.cat-card:hover{border-color:var(--blue);background:var(--blue-light);transform:translateY(-3px);box-shadow:var(--shadow)}
+.cat-icon{font-size:2.2rem;margin-bottom:8px;display:block}
+.cat-name{font-size:0.72rem;font-weight:700;color:var(--gray-600);line-height:1.3}
+.cat-od{font-family:'Noto Sans Oriya',sans-serif;font-size:0.62rem;color:var(--gray-400);display:block;margin-top:2px}
+
+/* ══ PROMO BANNERS ══ */
+.promo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.promo-card{border-radius:var(--radius);padding:24px;position:relative;overflow:hidden;transition:transform .2s}
+.promo-card:hover{transform:translateY(-4px)}
+.pc-blue{background:linear-gradient(135deg,var(--blue-dark),var(--blue))}
+.pc-green{background:linear-gradient(135deg,var(--green-dark),var(--green))}
+.pc-orange{background:linear-gradient(135deg,#c0392b,var(--orange))}
+.promo-tag{display:inline-block;background:var(--yellow);color:#1a1a1a;padding:3px 10px;border-radius:12px;font-size:0.66rem;font-weight:800;margin-bottom:8px;text-transform:uppercase}
+.promo-num{font-size:2rem;font-weight:800;color:#fff;line-height:1;margin-bottom:4px}
+.promo-card h3{color:#fff;font-size:0.95rem;font-weight:800;margin-bottom:4px}
+.promo-od{font-family:'Noto Sans Oriya',sans-serif;font-size:0.68rem;color:rgba(255,255,255,0.78);display:block;margin-bottom:6px}
+.promo-card p{color:rgba(255,255,255,0.75);font-size:0.75rem;line-height:1.5}
+.promo-bg-icon{position:absolute;right:14px;top:50%;transform:translateY(-50%);font-size:4rem;opacity:0.15}
+
+/* ══ SERVICES ══ */
+.services{background:var(--gray-50)}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:20px}
+.svc-card{background:#fff;border-radius:var(--radius);padding:28px 22px;border:1px solid var(--gray-200);transition:all .2s}
+.svc-card:hover{border-color:var(--blue);transform:translateY(-4px);box-shadow:var(--shadow)}
+.svc-icon-wrap{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;font-size:1.6rem;margin-bottom:16px}
+.si-blue{background:var(--blue-light)}
+.si-green{background:var(--green-light)}
+.si-orange{background:var(--orange-light)}
+.si-purple{background:#f0edfe}
+.svc-card h3{font-size:1rem;font-weight:800;margin-bottom:6px;color:var(--gray-800)}
+.svc-card .odia-sub{font-family:'Noto Sans Oriya',sans-serif;font-size:0.7rem;color:var(--green);display:block;margin-bottom:8px}
+.svc-card p{font-size:0.82rem;color:var(--gray-600);line-height:1.65}
+
+/* ══ HEALTH CONDITIONS ══ */
+.conditions{background:#fff}
+.cond-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+.cond-card{background:var(--gray-50);border:2px solid var(--gray-200);border-radius:var(--radius-sm);padding:16px 12px;text-align:center;transition:all .2s;cursor:default}
+.cond-card:hover{border-color:var(--green);background:var(--green-light);transform:translateY(-2px)}
+.cond-icon{font-size:1.8rem;margin-bottom:6px;display:block}
+.cond-name{font-size:0.76rem;font-weight:700;color:var(--gray-700)}
+.cond-od{font-family:'Noto Sans Oriya',sans-serif;font-size:0.62rem;color:var(--gray-400);display:block;margin-top:2px}
+
+/* ══ TRUST ══ */
+.trust{background:var(--gray-50)}
+.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.trust-card{background:#fff;border-radius:var(--radius);padding:24px 18px;text-align:center;border-top:4px solid var(--blue);box-shadow:var(--shadow-sm);transition:transform .2s}
+.trust-card:hover{transform:translateY(-3px)}
+.trust-card.t-green{border-top-color:var(--green)}
+.trust-card.t-orange{border-top-color:var(--orange)}
+.trust-card.t-purple{border-top-color:#7c3aed}
+.trust-icon{font-size:2rem;margin-bottom:10px;display:block}
+.trust-card h4{font-size:0.88rem;font-weight:800;margin-bottom:4px;color:var(--gray-800)}
+.trust-od{font-family:'Noto Sans Oriya',sans-serif;font-size:0.66rem;color:var(--green);display:block;margin-bottom:5px;font-weight:700}
+.trust-card p{font-size:0.74rem;color:var(--gray-400);line-height:1.55}
+
+/* ══ DOCTOR ══ */
+.doctor-sec{background:linear-gradient(135deg,var(--blue-dark),var(--blue),#0079d3);padding:60px 0}
+.doctor-inner{display:grid;grid-template-columns:1fr auto;gap:50px;align-items:center}
+.doc-text h2{color:#fff;font-size:clamp(1.4rem,3vw,2rem);font-weight:800;margin-bottom:6px}
+.doc-od{font-family:'Noto Sans Oriya',sans-serif;font-size:0.86rem;color:rgba(255,255,255,0.78);display:block;margin-bottom:14px}
+.doc-text p{color:rgba(255,255,255,0.78);font-size:0.88rem;line-height:1.7;margin-bottom:22px}
+.doc-btns{display:flex;gap:12px;flex-wrap:wrap}
+.doc-btn-w{background:#fff;color:var(--blue);padding:10px 22px;border-radius:9px;font-weight:800;font-size:0.84rem;transition:transform .2s}
+.doc-btn-w:hover{transform:translateY(-2px)}
+.doc-btn-o{background:transparent;color:#fff;padding:10px 22px;border-radius:9px;font-weight:700;font-size:0.84rem;border:2px solid rgba(255,255,255,0.45);transition:border-color .2s}
+.doc-btn-o:hover{border-color:#fff}
+.doc-visual{text-align:center}
+.doc-emoji{font-size:5.5rem;display:block;margin-bottom:14px}
+.doc-chips{display:flex;flex-direction:column;gap:8px}
+.doc-chip{background:rgba(255,255,255,0.14);color:#fff;padding:7px 16px;border-radius:8px;font-size:0.76rem;font-weight:700;text-align:center}
+
+/* ══ TESTIMONIALS ══ */
+.testi{background:#fff}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.testi-card{background:var(--gray-50);border-radius:var(--radius);padding:24px;border-left:4px solid var(--blue);transition:transform .2s}
+.testi-card:hover{transform:translateY(-3px)}
+.stars{color:var(--yellow);font-size:0.9rem;margin-bottom:10px}
+.testi-quote{font-size:0.84rem;color:var(--gray-600);line-height:1.65;font-style:italic;margin-bottom:6px}
+.testi-od{font-family:'Noto Sans Oriya',sans-serif;font-size:0.75rem;color:var(--gray-400);line-height:1.5;margin-bottom:14px}
+.testi-author{display:flex;align-items:center;gap:10px}
+.av{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:0.88rem;color:#fff;flex-shrink:0}
+.av-blue{background:var(--blue)}.av-green{background:var(--green)}.av-orange{background:var(--orange)}
+.au-name{font-weight:700;font-size:0.82rem;color:var(--gray-800)}
+.au-loc{font-size:0.7rem;color:var(--gray-400)}
+
+/* ══ HOW TO REACH ══ */
+.how-reach{background:var(--gray-50)}
+.reach-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.info-card{background:#fff;border-radius:var(--radius);padding:28px;box-shadow:var(--shadow-sm)}
+.info-card h3{font-size:1rem;font-weight:800;margin-bottom:4px;color:var(--gray-800)}
+.info-card .h3-od{font-family:'Noto Sans Oriya',sans-serif;font-size:0.72rem;color:var(--green);display:block;margin-bottom:20px}
+.info-item{display:flex;gap:14px;align-items:flex-start;margin-bottom:18px}
+.info-item:last-child{margin-bottom:0}
+.info-icon-wrap{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;font-size:1.2rem;flex-shrink:0}
+.iw-blue{background:var(--blue-light)}
+.iw-green{background:var(--green-light)}
+.iw-yellow{background:#fffbeb}
+.iw-red{background:#fef2f2}
+.info-label{font-size:0.66rem;color:var(--gray-400);font-weight:700;text-transform:uppercase;letter-spacing:0.5px}
+.info-value{font-size:0.88rem;font-weight:700;color:var(--gray-800);margin-top:1px}
+.info-value .od{font-family:'Noto Sans Oriya',sans-serif;font-size:0.7rem;color:var(--gray-400);font-weight:600;display:block;margin-top:2px}
+.map-placeholder{background:linear-gradient(135deg,var(--blue-light),var(--green-light));border-radius:var(--radius);height:280px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;border:2px dashed var(--gray-200)}
+.map-placeholder .mp-icon{font-size:3rem}
+.map-placeholder p{font-size:0.82rem;color:var(--gray-600);text-align:center;line-height:1.6}
+.map-placeholder a{background:var(--blue);color:#fff;padding:10px 22px;border-radius:8px;font-size:0.8rem;font-weight:800;transition:background .2s}
+.map-placeholder a:hover{background:var(--blue-dark)}
+
+/* ══ FAQ ══ */
+.faq{background:#fff}
+.faq-list{display:flex;flex-direction:column;gap:10px;max-width:800px;margin:0 auto}
+.faq-item{background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius-sm);overflow:hidden;transition:border-color .2s}
+.faq-item.open{border-color:var(--blue)}
+.faq-q{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;cursor:pointer;font-weight:700;font-size:0.88rem;color:var(--gray-800);gap:10px}
+.faq-q:hover{color:var(--blue)}
+.faq-icon{font-size:1rem;flex-shrink:0;transition:transform .3s;color:var(--gray-400)}
+.faq-item.open .faq-icon{transform:rotate(45deg);color:var(--blue)}
+.faq-a{display:none;padding:0 20px 16px;font-size:0.82rem;color:var(--gray-600);line-height:1.7}
+.faq-a .od{font-family:'Noto Sans Oriya',sans-serif;font-size:0.76rem;color:var(--gray-400);display:block;margin-top:4px}
+.faq-item.open .faq-a{display:block}
+
+/* ══ FOOTER ══ */
+footer{background:var(--gray-800);color:rgba(255,255,255,0.65)}
+.footer-top{padding:44px 5%;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}
+.footer-logo{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.footer-logo .fm{width:40px;height:40px;background:var(--blue);border-radius:10px;display:grid;place-items:center;font-size:20px;flex-shrink:0}
+.footer-logo .fn{font-size:0.95rem;font-weight:800;color:#fff}
+.footer-logo .fo{font-family:'Noto Sans Oriya',sans-serif;font-size:0.6rem;color:rgba(255,255,255,0.45)}
+.footer-about{font-size:0.76rem;line-height:1.7;margin-bottom:16px}
+.footer-contacts{display:flex;flex-direction:column;gap:7px}
+.fc{display:flex;align-items:center;gap:8px;font-size:0.74rem}
+.footer-col h4{color:#fff;font-weight:800;font-size:0.82rem;margin-bottom:14px}
+.footer-col ul{display:flex;flex-direction:column;gap:8px}
+.footer-col ul li a{font-size:0.75rem;color:rgba(255,255,255,0.5);transition:color .2s}
+.footer-col ul li a:hover{color:var(--green)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.1);padding:16px 5%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.footer-bottom p{font-size:0.73rem}
+.footer-badges{display:flex;gap:10px;flex-wrap:wrap}
+.fb{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);color:rgba(255,255,255,0.6);padding:4px 11px;border-radius:6px;font-size:0.68rem;font-weight:600}
+
+/* ══ WHATSAPP FLOAT ══ */
+.wa-fab{position:fixed;bottom:24px;right:24px;z-index:9999;width:56px;height:56px;background:#25d366;border-radius:50%;display:grid;place-items:center;font-size:1.6rem;box-shadow:0 4px 20px rgba(37,211,102,0.5);transition:all .2s;text-decoration:none}
+.wa-fab:hover{transform:scale(1.1) translateY(-2px);box-shadow:0 8px 28px rgba(37,211,102,0.6)}
+.wa-tooltip{position:absolute;right:66px;background:var(--gray-800);color:#fff;padding:6px 12px;border-radius:8px;font-size:0.72rem;font-weight:700;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .2s}
+.wa-tooltip::after{content:'';position:absolute;right:-5px;top:50%;transform:translateY(-50%);width:0;height:0;border-left:5px solid var(--gray-800);border-top:4px solid transparent;border-bottom:4px solid transparent}
+.wa-fab:hover .wa-tooltip{opacity:1}
+
+/* ══ BACK TO TOP ══ */
+.back-top{position:fixed;bottom:90px;right:24px;z-index:999;width:40px;height:40px;background:#fff;border-radius:50%;display:grid;place-items:center;font-size:1rem;box-shadow:var(--shadow);cursor:pointer;opacity:0;pointer-events:none;transition:all .2s;border:1px solid var(--gray-200)}
+.back-top.visible{opacity:1;pointer-events:auto}
+.back-top:hover{background:var(--blue);color:#fff;transform:translateY(-2px)}
+
+/* ══ RESPONSIVE — TABLET ══ */
+@media(max-width:960px){
+  .nav-links{display:none}
+  .nav-cta-group{display:none}
+  .hamburger{display:flex}
+  .nav-mobile-call{display:flex}
+  .hero-inner{grid-template-columns:1fr}
+  .hero-cards{display:grid;grid-template-columns:1fr 1fr}
+  .promo-grid{grid-template-columns:1fr 1fr}
+  .promo-grid .promo-card:nth-child(3){display:none}
+  .trust-grid{grid-template-columns:1fr 1fr}
+  .doctor-inner{grid-template-columns:1fr}
+  .doc-visual{display:none}
+  .testi-grid{grid-template-columns:1fr 1fr}
+  .reach-grid{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr 1fr;gap:28px}
+  .logo-name{font-size:1.5rem}
+}
+
+/* ══ RESPONSIVE — MOBILE ══ */
+@media(max-width:600px){
+  /* topbar — simplified */
+  .topbar{padding:7px 4%;flex-wrap:nowrap}
+  .topbar-left{gap:8px}
+  .topbar-item{font-size:0.68rem}
+  .topbar-item:not(.open-badge){display:none}
+  .topbar-sep{display:none}
+  .topbar-right .topbar-phone:last-child{display:none}
+  .topbar-phone{font-size:0.7rem;padding:4px 10px}
+
+  /* navbar */
+  .nav-inner{height:72px;padding:0 4%;gap:10px}
+  .logo-mark{width:44px;height:44px;font-size:22px;border-radius:12px}
+  .logo-name{font-size:1.25rem;letter-spacing:-0.2px}
+  .logo-tagline{display:none}
+  .logo-odia{font-size:0.58rem}
+  .hamburger{padding:7px}
+  .nav-mobile-call{padding:8px 13px;font-size:0.76rem}
+
+  /* mobile menu */
+  .mobile-menu a{font-size:0.86rem;padding:12px 12px}
+
+  /* marquee */
+  .marquee-item{padding:0 16px;font-size:0.68rem}
+  .marquee-badge{font-size:0.62rem}
+
+  /* discount bar */
+  .discount-bar{padding:9px 4%;gap:8px}
+  .d-pills{gap:5px}
+  .dpill{font-size:0.66rem;padding:4px 9px}
+  .d-wa{font-size:0.68rem;padding:6px 11px}
+
+  /* container */
+  .container{padding:0 4%}
+
+  /* hero */
+  .hero{padding:38px 0 46px}
+  .hero-inner{gap:26px}
+  .hero h1{font-size:1.55rem}
+  .hero-odia{font-size:0.88rem}
+  .hero-desc{font-size:0.85rem}
+  .hero-btn-primary,.hero-btn-outline{padding:11px 20px;font-size:0.84rem}
+  .hero-stats{gap:14px}
+  .stat-num{font-size:1.5rem}
+  .hero-cards{grid-template-columns:1fr}
+  .hero-card{padding:16px 18px}
+
+  /* offer strip */
+  .offer-strip{flex-direction:column;align-items:flex-start;gap:10px;padding:16px 4%}
+  .offer-chips{gap:6px}
+  .o-chip{font-size:0.7rem;padding:5px 10px}
+  .offer-cta{width:100%;text-align:center;padding:11px}
+
+  /* sections */
+  section{padding:38px 0}
+  .sec-title{font-size:1.25rem}
+  .sec-odia{margin-bottom:24px}
+
+  /* categories */
+  .cat-grid{grid-template-columns:repeat(3,1fr);gap:8px}
+  .cat-card{padding:14px 6px 10px;border-radius:10px}
+  .cat-icon{font-size:1.9rem;margin-bottom:6px}
+  .cat-name{font-size:0.68rem}
+
+  /* promos */
+  .promo-grid{grid-template-columns:1fr}
+  .promo-grid .promo-card:nth-child(3){display:block}
+  .promo-card{padding:20px}
+  .promo-num{font-size:1.7rem}
+
+  /* services */
+  .services-grid{grid-template-columns:1fr}
+  .svc-card{padding:22px 18px}
+
+  /* conditions */
+  .cond-grid{grid-template-columns:repeat(2,1fr);gap:8px}
+
+  /* trust */
+  .trust-grid{grid-template-columns:1fr 1fr;gap:10px}
+  .trust-card{padding:18px 12px}
+  .trust-icon{font-size:1.6rem}
+  .trust-card h4{font-size:0.8rem}
+  .trust-card p{font-size:0.7rem}
+
+  /* doctor */
+  .doctor-sec{padding:44px 0}
+  .doc-btns{flex-direction:column;gap:10px}
+  .doc-btn-w,.doc-btn-o{text-align:center;padding:12px}
+
+  /* testimonials */
+  .testi-grid{grid-template-columns:1fr}
+  .testi-card{padding:20px 16px}
+
+  /* contact */
+  .reach-grid{grid-template-columns:1fr}
+  .map-placeholder{height:220px}
+
+  /* faq */
+  .faq-q{font-size:0.84rem;padding:14px 14px}
+  .faq-a{padding:0 14px 14px;font-size:0.8rem}
+
+  /* footer */
+  .footer-top{grid-template-columns:1fr;gap:22px;padding:28px 4%}
+  .footer-bottom{padding:14px 4%;flex-direction:column;align-items:flex-start;gap:8px}
+  .footer-bottom p{font-size:0.7rem}
+  .footer-badges{gap:6px}
+  .fb{font-size:0.65rem}
+
+  /* back to top + whatsapp */
+  .wa-fab{width:50px;height:50px;font-size:1.4rem;bottom:18px;right:18px}
+  .back-top{width:36px;height:36px;bottom:78px;right:18px}
+}
+  .cat-icon{font-size:1.8rem}
+  .promo-grid{grid-template-columns:1fr}
+  .promo-grid .promo-card:nth-child(3){display:block}
+  .services-grid{grid-template-columns:1fr}
+  .cond-grid{grid-template-columns:repeat(2,1fr)}
+  .trust-grid{grid-template-columns:1fr 1fr}
+  .testi-grid{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr;gap:24px;padding:32px 4%}
+  .footer-bottom{padding:14px 4%;flex-direction:column;align-items:flex-start;gap:8px}
+  .hero-stats{gap:18px}
+  .offer-strip{flex-direction:column;align-items:flex-start;gap:10px;padding:16px 4%}
+  .reach-grid{grid-template-columns:1fr}
+  .d-wa{width:100%;justify-content:center}
+  .discount-bar{flex-direction:column;align-items:flex-start}
+}
+
+/* ══ ANIMATIONS ══ */
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.hero-inner,.offer-strip{animation:fadeUp .5s ease both}
+</style>
+</head>
+<body>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span class="marquee-item"><span class="marquee-badge">OFFER</span>Flat 10–15% OFF on ALL Medicines!</span>
+    <span class="marquee-item">💊 Generic Medicines — 15% OFF</span>
+    <span class="marquee-item">🏷️ Branded Medicines — 10% OFF</span>
+    <span class="marquee-item">👴 Senior Citizens — Extra 5% Discount</span>
+    <span class="marquee-item">👨‍⚕️ Dr. Omkar Ojha — FREE In-Store Consultation</span>
+    <span class="marquee-item">✅ 100% Genuine & Licensed Medicines</span>
+    <span class="marquee-item">📍 Gopabandhu Chhak, Jajpur Road, Odisha — 755019</span>
+    <span class="marquee-item">📞 9337228312 / 7381060210</span>
+    <span class="marquee-item"><span class="marquee-badge">20 YRS</span>Trusted Since 2005 — 5000+ Happy Families</span>
+    <span class="marquee-item"><span class="marquee-badge">OFFER</span>Flat 10–15% OFF on ALL Medicines!</span>
+    <span class="marquee-item">💊 Generic Medicines — 15% OFF</span>
+    <span class="marquee-item">🏷️ Branded Medicines — 10% OFF</span>
+    <span class="marquee-item">👴 Senior Citizens — Extra 5% Discount</span>
+    <span class="marquee-item">👨‍⚕️ Dr. Omkar Ojha — FREE In-Store Consultation</span>
+    <span class="marquee-item">✅ 100% Genuine & Licensed Medicines</span>
+    <span class="marquee-item">📍 Gopabandhu Chhak, Jajpur Road, Odisha — 755019</span>
+    <span class="marquee-item">📞 9337228312 / 7381060210</span>
+    <span class="marquee-item"><span class="marquee-badge">20 YRS</span>Trusted Since 2005 — 5000+ Happy Families</span>
+  </div>
+</div>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="topbar-left">
+    <div class="topbar-item"><span class="ico">📍</span><span><strong>Gopabandhu Chhak</strong>, Jajpur Road – 755019</span></div>
+    <div class="topbar-sep"></div>
+    <div class="open-badge"><span class="open-dot"></span><strong>Open Now</strong></div>
+    <div class="topbar-sep"></div>
+    <div class="topbar-item"><span class="ico">🕐</span><span>Mon–Sat: 9AM–8PM &nbsp;|&nbsp; Sun: 10AM–3PM</span></div>
+  </div>
+  <div class="topbar-right">
+    <a href="tel:+919337228312" class="topbar-phone">📞 +91 93372 28312</a>
+    <a href="tel:+917381060210" class="topbar-phone">📞 +91 73810 60210</a>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-inner">
+
+    <!-- LOGO — big & bold -->
+    <a href="#home" class="logo">
+      <div class="logo-mark">⚕️</div>
+      <div class="logo-text">
+        <div class="logo-name">Gupta Medical Corner</div>
+        <div class="logo-tagline">A Pharmacy For All Your Needs</div>
+        <div class="logo-odia">ଗୁପ୍ତା ମେଡିକାଲ କର୍ଣ୍ଣର · ଜାଜପୁର ରୋଡ</div>
+      </div>
+    </a>
+
+    <!-- Desktop nav links -->
+    <div class="nav-links">
+      <a href="#home" class="active">Home</a>
+      <a href="#services">Services</a>
+      <a href="#categories">Products</a>
+      <a href="#consultation">Doctor</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <!-- Desktop CTAs -->
+    <div class="nav-cta-group">
+      <a href="#consultation" class="btn-consult">🩺 Free Consult</a>
+      <a href="tel:+919337228312" class="btn-call"><span class="ring"></span>Call Now</a>
+    </div>
+
+    <!-- Mobile: quick call button -->
+    <a href="tel:+919337228312" class="nav-mobile-call">📞 Call</a>
+
+    <!-- Hamburger -->
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <!-- Store info strip -->
+  <div class="mobile-info-strip">
+    <div class="mis-item">📍 Gopabandhu Chhak, Jajpur Road</div>
+    <div class="mis-item">🕐 Mon–Sat: 9AM–8PM</div>
+    <div class="mis-item"><span style="background:var(--yellow);color:#1a1a1a;padding:1px 8px;border-radius:10px;font-weight:800;font-size:0.7rem">10–15% OFF</span> All Medicines</div>
+  </div>
+  <!-- Nav links -->
+  <div class="mobile-menu-inner">
+    <a href="#home" onclick="closeMenu()">🏠&nbsp; Home</a>
+    <a href="#services" onclick="closeMenu()">💊&nbsp; Services</a>
+    <a href="#categories" onclick="closeMenu()">🗂️&nbsp; Products & Categories</a>
+    <a href="#consultation" onclick="closeMenu()">👨‍⚕️&nbsp; Free Doctor Consultation</a>
+    <a href="#contact" onclick="closeMenu()">📍&nbsp; Contact & Location</a>
+  </div>
+  <!-- CTA row -->
+  <div class="mobile-cta-row">
+    <a href="#consultation" class="m-consult" onclick="closeMenu()">🩺 Free Consult</a>
+    <a href="tel:+919337228312" class="m-call">📞 Call Now</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-left">
+        <div class="hero-badge">✅ Trusted Since 2005 · Jajpur Road, Odisha</div>
+        <h1>A Pharmacy For<br><span>All Your Needs</span></h1>
+        <div class="hero-odia">ଆପଣଙ୍କ ସମସ୍ତ ଆବଶ୍ୟକତା ପାଇଁ ଏକ ଔଷଧାଳୟ</div>
+        <p class="hero-desc">Gupta Medical Corner — Genuine medicines, expert pharmacist advice, and free doctor consultation. 10–15% discount on all medicines at Gopabandhu Chhak, Jajpur Road.</p>
+        <div class="hero-btns">
+          <a href="tel:+919337228312" class="hero-btn-primary">📞 Call Us Now</a>
+          <a href="#services" class="hero-btn-outline">Our Services →</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-num">5000+</div>
+            <div class="stat-label">Happy Families<span class="stat-od">ଖୁସି ପରିବାର</span></div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">20 Yrs</div>
+            <div class="stat-label">Experience<span class="stat-od">ଅଭିଜ୍ଞତା</span></div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">100%</div>
+            <div class="stat-label">Genuine Meds<span class="stat-od">ଅସଲ ଔଷଧ</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-cards">
+        <div class="hero-card hc-green">
+          <div class="hc-top">
+            <span class="hc-icon">👨‍⚕️</span>
+            <div><div class="hc-title">Dr. Omkar Ojha</div><div class="hc-od">ଡ. ଓମ୍କାର ଓଝା</div></div>
+          </div>
+          <p class="hc-desc">Free in-store doctor consultation available every day. Walk in anytime during store hours.</p>
+          <span class="hc-tag">🟢 FREE Consultation</span>
+        </div>
+        <div class="hero-card hc-orange">
+          <div class="hc-top">
+            <span class="hc-icon">💊</span>
+            <div><div class="hc-title">10–15% OFF</div><div class="hc-od">ସମସ୍ତ ଔଷଧ ଉପରେ ଛାଡ଼</div></div>
+          </div>
+          <p class="hc-desc">Flat discount on all medicines — Generic 15% off, Branded 10% off. Senior citizens extra 5%.</p>
+          <span class="hc-tag">💰 Best Price Guaranteed</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OFFER STRIP -->
+<div class="offer-strip">
+  <div class="offer-text">
+    <h3>🔥 Exclusive Discounts — Jajpur Road's Most Trusted Pharmacy!</h3>
+    <span class="od">ଜାଜପୁର ରୋଡ଼ର ସବୁଠୁ ବିଶ୍ୱସ୍ତ ଔଷଧ ଦୋକାନ</span>
+  </div>
+  <div class="offer-chips">
+    <span class="o-chip">💊 Generic: 15% OFF</span>
+    <span class="o-chip">🏷️ Branded: 10% OFF</span>
+    <span class="o-chip">👴 Senior Extra: 5%</span>
+  </div>
+  <a href="tel:+919337228312" class="offer-cta">📞 Call & Order</a>
+</div>
+
+<!-- DISCOUNT BAR -->
+<div class="discount-bar">
+  <div class="d-pills">
+    <span class="dpill dp-yellow">🎉 10–15% OFF All Medicines</span>
+    <span class="dpill dp-green">💊 Generic 15% OFF · ଜେନେରିକ ୧୫%</span>
+    <span class="dpill dp-white">🏷️ Branded 10% OFF · ବ୍ରାଣ୍ଡ ୧୦%</span>
+    <span class="dpill dp-orange">👴 Senior Extra 5% · ବୃଦ୍ଧ ୫%</span>
+    <span class="dpill dp-white">👨‍⚕️ Free Consult · ମାଗଣା ପରାମର୍ଶ</span>
+  </div>
+  <a href="https://wa.me/919337228312?text=Hello%20Gupta%20Medical%20Corner" class="d-wa">💬 WhatsApp Order</a>
+</div>
+
+<!-- CATEGORIES -->
+<section class="cat-section" id="categories">
+  <div class="container">
+    <div class="text-center">
+      <div class="sec-label">Browse by Category</div>
+      <h2 class="sec-title">Shop By Category</h2>
+      <div class="sec-odia">ବର୍ଗ ଅନୁସାରେ କିଣନ୍ତୁ</div>
+    </div>
+    <div class="cat-grid">
+      <div class="cat-card"><span class="cat-icon">💊</span><div class="cat-name">All Medicines<span class="cat-od">ସମସ୍ତ ଔଷଧ</span></div></div>
+      <div class="cat-card"><span class="cat-icon">🧴</span><div class="cat-name">Skin Care<span class="cat-od">ଚର୍ମ ଯତ୍ନ</span></div></div>
+      <div class="cat-card"><span class="cat-icon">👶</span><div class="cat-name">Baby Care<span class="cat-od">ଶିଶୁ ଯତ୍ନ</span></div></div>
+      <div class="cat-card"><span class="cat-icon">💪</span><div class="cat-name">Vitamins<span class="cat-od">ଭିଟାମିନ</span></div></div>
+      <div class="cat-card"><span class="cat-icon">🩸</span><div class="cat-name">Diabetic Care<span class="cat-od">ମଧୁମେହ</span></div></div>
+      <div class="cat-card"><span class="cat-icon">❤️</span><div class="cat-name">Cardiac Care<span class="cat-od">ହୃଦୟ</span></div></div>
+      <div class="cat-card"><span class="cat-icon">🦷</span><div class="cat-name">Oral Care<span class="cat-od">ଦାନ୍ତ ଯତ୍ନ</span></div></div>
+      <div class="cat-card"><span class="cat-icon">💆</span><div class="cat-name">Pain Relief<span class="cat-od">ଯନ୍ତ୍ରଣା</span></div></div>
+      <div class="cat-card"><span class="cat-icon">🌿</span><div class="cat-name">Ayurveda<span class="cat-od">ଆୟୁର୍ବେଦ</span></div></div>
+      <div class="cat-card"><span class="cat-icon">🍎</span><div class="cat-name">Health Foods<span class="cat-od">ସ୍ୱାସ୍ଥ୍ୟ ଖାଦ୍ୟ</span></div></div>
+      <div class="cat-card"><span class="cat-icon">🏋️</span><div class="cat-name">Nutrition<span class="cat-od">ପୋଷଣ</span></div></div>
+      <div class="cat-card"><span class="cat-icon">🧬</span><div class="cat-name">Health Devices<span class="cat-od">ସ୍ୱାସ୍ଥ୍ୟ ଯନ୍ତ୍ର</span></div></div>
+      <div class="cat-card"><span class="cat-icon">🤱</span><div class="cat-name">Women Care<span class="cat-od">ମହିଳା ଯତ୍ନ</span></div></div>
+      <div class="cat-card"><span class="cat-icon">👴</span><div class="cat-name">Elderly Care<span class="cat-od">ବୃଦ୍ଧ ଯତ୍ନ</span></div></div>
+      <div class="cat-card"><span class="cat-icon">💉</span><div class="cat-name">Surgical<span class="cat-od">ଶଲ୍ୟ</span></div></div>
+      <div class="cat-card"><span class="cat-icon">🧠</span><div class="cat-name">Mental Health<span class="cat-od">ମନ ସ୍ୱାସ୍ଥ୍ୟ</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROMO BANNERS -->
+<section style="padding:0 0 50px;background:#fff">
+  <div class="container">
+    <div class="promo-grid">
+      <div class="promo-card pc-blue">
+        <div class="promo-tag">Generic Medicines</div>
+        <div class="promo-num">15% OFF</div>
+        <h3>All Generic Drugs</h3>
+        <span class="promo-od">ସମସ୍ତ ଜେନେରିକ ଔଷଧ</span>
+        <p>Quality certified generic medicines at the lowest price in Jajpur Road</p>
+        <div class="promo-bg-icon">💊</div>
+      </div>
+      <div class="promo-card pc-green">
+        <div class="promo-tag">Branded Medicines</div>
+        <div class="promo-num">10% OFF</div>
+        <h3>All Branded Drugs</h3>
+        <span class="promo-od">ସମସ୍ତ ବ୍ରାଣ୍ଡ ଔଷଧ</span>
+        <p>100% genuine branded medicines — certified & authentic guaranteed</p>
+        <div class="promo-bg-icon">🏷️</div>
+      </div>
+      <div class="promo-card pc-orange">
+        <div class="promo-tag">Senior Citizens</div>
+        <div class="promo-num">Extra 5%</div>
+        <h3>Special Discount</h3>
+        <span class="promo-od">ବୃଦ୍ଧ ନାଗରିକ ବିଶେଷ ଛାଡ଼</span>
+        <p>Additional discount for senior citizens on all products storewide</p>
+        <div class="promo-bg-icon">👴</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="text-center">
+      <div class="sec-label">What We Offer</div>
+      <h2 class="sec-title">Our Services</h2>
+      <div class="sec-odia">ଆମର ସେବାସମୂହ</div>
+    </div>
+    <div class="services-grid">
+      <div class="svc-card">
+        <div class="svc-icon-wrap si-blue">💊</div>
+        <h3>All Medicines</h3>
+        <span class="odia-sub">ସମସ୍ତ ଔଷଧ ଉପଲବ୍ଧ</span>
+        <p>Generic to branded — all medicines available with 10–15% discount. 100% original and certified products from licensed suppliers only.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon-wrap si-green">👨‍⚕️</div>
+        <h3>Free Doctor Consultation</h3>
+        <span class="odia-sub">ମାଗଣା ଡାକ୍ତର ପରାମର୍ଶ</span>
+        <p>Dr. Omkar Ojha is available in-store for free consultation every day. Get the right diagnosis and treatment advice without any fees.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon-wrap si-orange">🩺</div>
+        <h3>Basic Health Checkup</h3>
+        <span class="odia-sub">ସ୍ୱାସ୍ଥ୍ୟ ପରୀକ୍ଷା</span>
+        <p>Blood pressure, blood sugar, weight monitoring — basic health checkup services available at minimal cost. Walk in anytime.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon-wrap si-purple">🧴</div>
+        <h3>Health & Wellness Products</h3>
+        <span class="odia-sub">ସ୍ୱାସ୍ଥ୍ୟ ଉତ୍ପାଦ</span>
+        <p>Vitamins, supplements, baby care, skin care, surgical items — all trusted brands available in store. Ask our expert pharmacist for guidance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HEALTH CONDITIONS -->
+<section class="conditions">
+  <div class="container">
+    <div class="text-center">
+      <div class="sec-label">Browse by Condition</div>
+      <h2 class="sec-title">Health Conditions We Serve</h2>
+      <div class="sec-odia">ସ୍ୱାସ୍ଥ୍ୟ ସ୍ଥିତି ଅନୁସାରେ</div>
+    </div>
+    <div class="cond-grid">
+      <div class="cond-card"><span class="cond-icon">🩸</span><div class="cond-name">Diabetes<span class="cond-od">ମଧୁମେହ</span></div></div>
+      <div class="cond-card"><span class="cond-icon">❤️</span><div class="cond-name">Cardiac Care<span class="cond-od">ହୃଦୟ</span></div></div>
+      <div class="cond-card"><span class="cond-icon">🫁</span><div class="cond-name">Respiratory<span class="cond-od">ଶ୍ୱାସ</span></div></div>
+      <div class="cond-card"><span class="cond-icon">🦴</span><div class="cond-name">Bone & Joint<span class="cond-od">ହାଡ଼</span></div></div>
+      <div class="cond-card"><span class="cond-icon">🤢</span><div class="cond-name">Stomach Care<span class="cond-od">ପେଟ</span></div></div>
+      <div class="cond-card"><span class="cond-icon">🫀</span><div class="cond-name">Liver Care<span class="cond-od">ଯକୃତ</span></div></div>
+      <div class="cond-card"><span class="cond-icon">👁️</span><div class="cond-name">Eye Care<span class="cond-od">ଆଖି</span></div></div>
+      <div class="cond-card"><span class="cond-icon">🤧</span><div class="cond-name">Cold & Flu<span class="cond-od">ଥଣ୍ଡା</span></div></div>
+      <div class="cond-card"><span class="cond-icon">🧠</span><div class="cond-name">Mental Health<span class="cond-od">ମାନସିକ</span></div></div>
+      <div class="cond-card"><span class="cond-icon">🦷</span><div class="cond-name">Oral Health<span class="cond-od">ଦାନ୍ତ</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BADGES -->
+<section class="trust">
+  <div class="container">
+    <div class="text-center">
+      <div class="sec-label">Why Choose Us</div>
+      <h2 class="sec-title">Why Gupta Medical Corner?</h2>
+      <div class="sec-odia">ଗୁପ୍ତା ମେଡିକାଲ କର୍ଣ୍ଣର କାହିଁକି?</div>
+    </div>
+    <div class="trust-grid">
+      <div class="trust-card">
+        <span class="trust-icon">✅</span>
+        <h4>100% Genuine Medicines</h4>
+        <span class="trust-od">ଅସଲ ଔଷଧ</span>
+        <p>All medicines are certified, licensed & verified. Only authentic products from approved suppliers.</p>
+      </div>
+      <div class="trust-card t-green">
+        <span class="trust-icon">💰</span>
+        <h4>Best Price Guaranteed</h4>
+        <span class="trust-od">ସର୍ବୋତ୍ତମ ମୂଲ୍ୟ</span>
+        <p>10–15% off on all medicines — lowest prices in Jajpur Road. No hidden charges ever.</p>
+      </div>
+      <div class="trust-card t-orange">
+        <span class="trust-icon">🏆</span>
+        <h4>Trusted Since 2005</h4>
+        <span class="trust-od">୨୦ ବର୍ଷ ବିଶ୍ୱାସ</span>
+        <p>20+ years of trust in Jajpur Road. Over 5000+ families rely on us for their healthcare.</p>
+      </div>
+      <div class="trust-card t-purple">
+        <span class="trust-icon">👨‍⚕️</span>
+        <h4>Free Doctor Consultation</h4>
+        <span class="trust-od">ମାଗଣା ପରାମର୍ଶ</span>
+        <p>Dr. Omkar Ojha available in-store for free consultation. No appointment needed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOCTOR SECTION -->
+<section class="doctor-sec" id="consultation">
+  <div class="container">
+    <div class="doctor-inner">
+      <div class="doc-text">
+        <div class="sec-label" style="color:rgba(255,255,255,0.7)">In-Store Consultation</div>
+        <h2>Free Doctor Consultation — Dr. Omkar Ojha</h2>
+        <span class="doc-od">ମାଗଣା ଡାକ୍ତର ପରାମର୍ଶ — ଡ. ଓମ୍କାର ଓଝା</span>
+        <p>Visit Gupta Medical Corner and consult our experienced in-store doctor for completely FREE. Get the right diagnosis and treatment advice without paying any consultation fees — at Gopabandhu Chhak, Jajpur Road.</p>
+        <div class="doc-btns">
+          <a href="tel:+919337228312" class="doc-btn-w">📞 Call for Appointment</a>
+          <a href="#contact" class="doc-btn-o">📍 Visit Store</a>
+        </div>
+      </div>
+      <div class="doc-visual">
+        <span class="doc-emoji">🩺</span>
+        <div class="doc-chips">
+          <div class="doc-chip">🕗 Mon–Sat: 9 AM – 8 PM</div>
+          <div class="doc-chip">🕑 Sunday: 10 AM – 3 PM</div>
+          <div class="doc-chip">📍 In-Store, Jajpur Road</div>
+          <div class="doc-chip">💚 Completely FREE</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testi">
+  <div class="container">
+    <div class="text-center">
+      <div class="sec-label">Customer Reviews</div>
+      <h2 class="sec-title">What People Say</h2>
+      <div class="sec-odia">ଗ୍ରାହକମାନଙ୍କ ମତ</div>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p class="testi-quote">"Best pharmacy in Jajpur Road! 15% discount on medicines and Dr. Ojha's free consultation is a huge benefit. Highly recommended for everyone!"</p>
+        <p class="testi-od">"ଜାଜପୁର ରୋଡ଼ର ସବୁଠୁ ଭଲ ଔଷଧ ଦୋକାନ! ମୋ ସ୍ୱାସ୍ଥ୍ୟ ଦେଖାଶୁଣାରେ ବହୁ ସାହାଯ୍ୟ।"</p>
+        <div class="testi-author">
+          <div class="av av-blue">R</div>
+          <div><div class="au-name">Ramesh Mohanty</div><div class="au-loc">📍 Jajpur Road</div></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p class="testi-quote">"Always buy medicines here. 100% genuine products, fair prices, and the pharmacist gives excellent advice. Trusted for over 8 years!"</p>
+        <p class="testi-od">"ଅସଲ ଉତ୍ପାଦ, ଭଲ ମୂଲ୍ୟ ଏବଂ ଔଷଧ ବିଶେଷଜ୍ଞ ବହୁ ସହାୟକ। ୮ ବର୍ଷ ଧରି ଏଠାରୁ କିଣୁଛି।"</p>
+        <div class="testi-author">
+          <div class="av av-green">P</div>
+          <div><div class="au-name">Priyanka Das</div><div class="au-loc">📍 Gopabandhu Chhak</div></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p class="testi-quote">"Senior citizen discount is very helpful. The staff is polite and knowledgeable. Fully trusted store for 10+ years. Never go anywhere else!"</p>
+        <p class="testi-od">"ବୟସ୍କ ନାଗରିକ ଛାଡ଼ ବହୁ ଉପକାରୀ। ୧୦ ବର୍ଷ ଧରି ଏହି ଦୋକାନ ଉପରେ ସଂପୂର୍ଣ୍ଣ ବିଶ୍ୱାସ।"</p>
+        <div class="testi-author">
+          <div class="av av-orange">S</div>
+          <div><div class="au-name">Suresh Nayak</div><div class="au-loc">📍 Jajpur Road, Odisha</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW TO REACH / CONTACT -->
+<section class="how-reach" id="contact">
+  <div class="container">
+    <div class="text-center">
+      <div class="sec-label">Find Us</div>
+      <h2 class="sec-title">Contact & Location</h2>
+      <div class="sec-odia">ଆମ ସହ ଯୋଗାଯୋଗ ଏବଂ ଠିକଣା</div>
+    </div>
+    <div class="reach-grid">
+      <div class="info-card">
+        <h3>Store Information</h3>
+        <span class="h3-od">ଦୋକାନ ସୂଚନା</span>
+        <div class="info-item">
+          <div class="info-icon-wrap iw-blue">📍</div>
+          <div>
+            <div class="info-label">Address / ଠିକଣା</div>
+            <div class="info-value">Gopabandhu Chhak, Infront of Reliance Trends, Main Road, Jajpur Road, Odisha – 755019<span class="od">ଗୋପବନ୍ଧୁ ଛକ, ରିଲାଏନ୍ସ ଟ୍ରେଣ୍ଡସ ସାମ୍ନା, ଜାଜପୁର ରୋଡ</span></div>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon-wrap iw-green">📞</div>
+          <div>
+            <div class="info-label">Phone / ଫୋନ</div>
+            <div class="info-value"><a href="tel:+919337228312" style="color:var(--blue)">+91 93372 28312</a><br><a href="tel:+917381060210" style="color:var(--blue)">+91 73810 60210</a></div>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon-wrap iw-yellow">🕐</div>
+          <div>
+            <div class="info-label">Timings / ସମୟ</div>
+            <div class="info-value">Mon–Sat: 9 AM – 8 PM<br>Sunday: 10 AM – 3 PM<span class="od">ସୋମ–ଶନି: ୯ – ୮ | ରବି: ୧୦ – ୩</span></div>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon-wrap iw-red">🆔</div>
+          <div>
+            <div class="info-label">GSTIN</div>
+            <div class="info-value" style="font-family:monospace;font-size:0.82rem">21BCQPG7217N1ZC</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="map-placeholder">
+          <span class="mp-icon">🗺️</span>
+          <p><strong>Gopabandhu Chhak</strong><br>Infront of Reliance Trends<br>Main Road, Jajpur Road, Odisha – 755019</p>
+          <a href="https://maps.google.com/?q=Gopabandhu+Chhak+Jajpur+Road+Odisha" target="_blank">📍 Open in Google Maps</a>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px">
+          <a href="tel:+919337228312" style="background:var(--blue);color:#fff;padding:13px;border-radius:10px;text-align:center;font-weight:800;font-size:0.82rem;transition:background .2s">📞 Call Now</a>
+          <a href="https://wa.me/919337228312?text=Hello%20Gupta%20Medical%20Corner%2C%20I%20need%20medicines" target="_blank" style="background:#25d366;color:#fff;padding:13px;border-radius:10px;text-align:center;font-weight:800;font-size:0.82rem;transition:background .2s">💬 WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="container">
+    <div class="text-center">
+      <div class="sec-label">FAQs</div>
+      <h2 class="sec-title">Frequently Asked Questions</h2>
+      <div class="sec-odia">ସାଧାରଣ ପ୍ରଶ୍ନ ଓ ଉତ୍ତର</div>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">What discount do you give on medicines? <span class="faq-icon">+</span></div>
+        <div class="faq-a">We offer a flat 10–15% discount on all medicines. Generic medicines get 15% off, branded medicines get 10% off. Senior citizens (60+ years) get an additional 5% discount on top of that.<span class="od">ଆମେ ସମସ୍ତ ଔଷଧରେ ୧୦–୧୫% ଛାଡ଼ ଦେଉ। ବୃଦ୍ଧ ନାଗରିକ ୫% ଅଧିକ ଛାଡ଼ ପାଆନ୍ତି।</span></div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">Is the doctor consultation really free? <span class="faq-icon">+</span></div>
+        <div class="faq-a">Yes, completely free! Dr. Omkar Ojha is available in-store for free consultation every day during store hours. No appointment is needed — just walk in.<span class="od">ହଁ, ସଂପୂର୍ଣ୍ଣ ମାଗଣା! ଡ. ଓମ୍କାର ଓଝା ପ୍ରତିଦିନ ଦୋକାନ ସମୟ ମଧ୍ୟରେ ଉପଲବ୍ଧ।</span></div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">Are all your medicines 100% genuine? <span class="faq-icon">+</span></div>
+        <div class="faq-a">Absolutely. All medicines sold at Gupta Medical Corner are procured from licensed and approved distributors only. We are a fully licensed pharmacy with GSTIN 21BCQPG7217N1ZC. Every product is genuine and certified.<span class="od">ଆମ ଦୋକାନର ସମସ୍ତ ଔଷଧ ଲାଇସେନ୍ସଧାରୀ ଯୋଗାଣକାରୀଙ୍କ ଠାରୁ ଆସ।</span></div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">What are your store timings? <span class="faq-icon">+</span></div>
+        <div class="faq-a">We are open Monday to Saturday from 9 AM to 8 PM, and on Sundays from 10 AM to 3 PM. You can also call us on +91 93372 28312 before visiting.<span class="od">ସୋମ–ଶନି: ସକାଳ ୯ – ସଂଧ୍ୟା ୮ | ରବିବାର: ସକାଳ ୧୦ – ଅପରାହ୍ନ ୩</span></div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">Where exactly is the store located? <span class="faq-icon">+</span></div>
+        <div class="faq-a">We are located at Gopabandhu Chhak, Infront of Reliance Trends, Main Road, Jajpur Road, Odisha – 755019. We are a landmark store — easy to find near Reliance Trends on the main road.<span class="od">ଗୋପବନ୍ଧୁ ଛକ, ରିଲାଏନ୍ସ ଟ୍ରେଣ୍ଡସ ସାମ୍ନା, ମୁଖ୍ୟ ରୋଡ, ଜାଜପୁର ରୋଡ – ୭୫୫୦୧୯</span></div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">Do you have baby care and skin care products? <span class="faq-icon">+</span></div>
+        <div class="faq-a">Yes! We stock a wide range of health and wellness products including baby care, skin care, vitamins, supplements, surgical items, and health devices — all from trusted brands at discounted prices.<span class="od">ହଁ! ଆମ ଦୋକାନରେ ଶିଶୁ ଯତ୍ନ, ଚର୍ମ ଯତ୍ନ, ଭିଟାମିନ ଆଦି ଉପଲବ୍ଧ।</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-logo">
+        <div class="fm">⚕️</div>
+        <div><div class="fn">Gupta Medical Corner</div><div class="fo">ଗୁପ୍ତା ମେଡିକାଲ କର୍ଣ୍ଣର · ଜାଜପୁର ରୋଡ</div></div>
+      </div>
+      <p class="footer-about">A Pharmacy For All Your Needs — Trusted by 5000+ families in Jajpur Road since 2005. Genuine medicines, expert advice & free doctor consultation every day.</p>
+      <div class="footer-contacts">
+        <div class="fc"><span>📍</span><span>Gopabandhu Chhak, Jajpur Road, Odisha 755019</span></div>
+        <div class="fc"><span>📞</span><a href="tel:+919337228312" style="color:rgba(255,255,255,.65)">+91 93372 28312 / +91 73810 60210</a></div>
+        <div class="fc"><span>🕐</span><span>Mon–Sat: 9AM–8PM | Sun: 10AM–3PM</span></div>
+        <div class="fc"><span>🆔</span><span>GSTIN: 21BCQPG7217N1ZC</span></div>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#categories">Products</a></li>
+        <li><a href="#consultation">Doctor Consultation</a></li>
+        <li><a href="#contact">Contact & Location</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Our Offers</h4>
+      <ul>
+        <li><a href="#">Generic: 15% OFF</a></li>
+        <li><a href="#">Branded: 10% OFF</a></li>
+        <li><a href="#">Senior Citizen: Extra 5%</a></li>
+        <li><a href="#">Free Doctor Consultation</a></li>
+        <li><a href="#">Basic Health Checkup</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Product Categories</h4>
+      <ul>
+        <li><a href="#">All Medicines</a></li>
+        <li><a href="#">Diabetic Care</a></li>
+        <li><a href="#">Cardiac Care</a></li>
+        <li><a href="#">Baby Care</a></li>
+        <li><a href="#">Vitamins & Supplements</a></li>
+        <li><a href="#">Ayurveda</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Gupta Medical Corner, Jajpur Road, Odisha. All rights reserved. | GSTIN: 21BCQPG7217N1ZC</p>
+    <div class="footer-badges">
+      <span class="fb">✅ Licensed Pharmacy</span>
+      <span class="fb">🏆 Trusted Since 2005</span>
+      <span class="fb">💊 100% Genuine</span>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FAB -->
+<a href="https://wa.me/919337228312?text=Hello%20Gupta%20Medical%20Corner%2C%20I%20need%20medicines" class="wa-fab" target="_blank">
+  💬<span class="wa-tooltip">Order on WhatsApp</span>
+</a>
+
+<!-- BACK TO TOP -->
+<div class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</div>
+
+<script>
+/* ── MOBILE MENU ── */
+function toggleMenu(){
+  document.getElementById('hamburger').classList.toggle('open');
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+function closeMenu(){
+  document.getElementById('hamburger').classList.remove('open');
+  document.getElementById('mobileMenu').classList.remove('open');
+}
+
+/* ── FAQ ── */
+function toggleFaq(el){
+  const isOpen = el.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(f=>f.classList.remove('open'));
+  if(!isOpen) el.classList.add('open');
+}
+
+/* ── ACTIVE NAV ── */
+const sections = document.querySelectorAll('section[id], .hero[id]');
+const navLinks = document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll',()=>{
+  let cur='';
+  sections.forEach(s=>{if(window.scrollY>=s.offsetTop-100)cur=s.id});
+  navLinks.forEach(a=>{
+    a.classList.remove('active');
+    if(a.getAttribute('href')==='#'+cur) a.classList.add('active');
+  });
+  /* back to top */
+  document.getElementById('backTop').classList.toggle('visible', window.scrollY > 400);
+});
+
+/* ── CLOSE MENU ON OUTSIDE CLICK ── */
+document.addEventListener('click',e=>{
+  if(!e.target.closest('.navbar')&&!e.target.closest('.mobile-menu')) closeMenu();
+});
+</script>
+</body>
+</html>
